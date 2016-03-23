@@ -1,0 +1,25 @@
+<table class="roster-table">
+  <thead>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Position</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>DOB</th>
+    <th>Age</th>
+    <th>School</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="player in teamCtrl.team.resultSets[0].rowSet | orderBy:player[3]">
+      <td>{{player[3]}}</td>
+      <td>{{player[4]}}</td>
+      <td>{{player[5]}}</td>
+      <td>{{player[6]}}</td>
+      <td>{{player[7]}}</td>
+      <td>{{player[8]}}</td>
+      <td>{{player[9]}}</td>
+      <td>{{player[11]}}</td>
+    </tr>
+  </tbody>
+</table>
+<div ng-show="teamCtrl.loading">Loading...</div>
