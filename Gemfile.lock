@@ -1,8 +1,3 @@
-PATH
-  remote: /Users/jessemills/Documents/Workspace/nba_api_wrapper
-  specs:
-    nba_api_wrapper (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,6 +83,9 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    nba_api_wrapper (0.2.3)
+      http (~> 1.0.2, >= 1.0)
+      json (~> 1.8.1, >= 1.8.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
@@ -167,7 +165,7 @@ DEPENDENCIES
   http
   jbuilder (~> 2.0)
   jquery-rails
-  nba_api_wrapper!
+  nba_api_wrapper (~> 0.2.3)
   pg (~> 0.15)
   rails (= 4.2.6)
   sass-rails (~> 5.0)

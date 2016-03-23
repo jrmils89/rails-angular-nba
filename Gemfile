@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'http'
 
-gem "nba_api_wrapper", :path => "/Users/jessemills/Documents/Workspace/nba_api_wrapper"
+gem 'nba_api_wrapper', '~> 0.2.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

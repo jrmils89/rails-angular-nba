@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <% @player["resultSets"][0]["headers"].each do |h| %>
+      <th><%= h %></th>
+    <% end %>
+  </thead>
+  <tbody>
+    <% @player["resultSets"][0]["rowSet"].each do |player| %>
+      <tr>
+        <% player.each_with_index do |cell, index| %>
+          <td>
+              <%= cell %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
