@@ -2,13 +2,16 @@
 <html>
 <head>
   <title>NBA</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/app.css">
+  <base href="/">
 </head>
-<body>
 
-<%= yield %>
-
+<body ng-app="nba">
+  <div ng-view>
+    <%= yield %>
+  </div>
 </body>
 </html>

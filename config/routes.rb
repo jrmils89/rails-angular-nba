@@ -3,14 +3,19 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
-
   # Example of regular route:
-  resources :notes
+  namespace :api do
+    namespace :v1 do
+      resources :notes
+      get 'teams' => 'nba#teams', as: :team
+      get 'teams/:id' => 'nba#team_roster', as: :roster
+      get 'player/:id' => 'nba#player', as: :player
+    end
+  end
+  get '/' => 'static#home', as: :home
+  get '/nba' => 'static#nba', as: :nba
 
-  get 'teams/:id' => 'nba#team_roster', as: :roster
-  get 'player/:id' => 'nba#player', as: :player
-  
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -56,4 +61,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  ## LEAVE THIS AT THE END SO THAT ANY ROUTE NOT AVAIABLE IS REDIRECT TO ROOT!!!
+  get '*path' => redirect('/')
+
 end

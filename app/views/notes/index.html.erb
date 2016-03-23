@@ -1,5 +1,0 @@
-<% @notes.each do |note| %>
-  <p><%= note.body %> <%= link_to "Show", note_path(note.id) %> <%= link_to "Edit", edit_note_path(note.id) %> <%= link_to("Destroy", note_path(note.id), method: :delete) %></p>
-<% end %>
-
-
