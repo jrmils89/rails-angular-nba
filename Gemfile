@@ -27,6 +27,10 @@ gem 'http'
 
 gem 'nba_api_wrapper', '~> 0.2.3'
 
+gem 'rails_12factor'
+
+ruby '2.2.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
