@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
   get '/' => 'static#home', as: :home
   get '/nba' => 'static#nba', as: :nba
+  get '/team/:id' => 'static#team', as: :team
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

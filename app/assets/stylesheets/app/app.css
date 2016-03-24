@@ -1,0 +1,65 @@
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-size: 18px;
+  background-color: #f0f0f0;
+}
+
+body {
+  font-size: 1rem;
+  text-align: center;
+}
+
+teams-directive {
+  width: 85%;
+}
+a.team-holder {
+  display: inline-block;
+  background-color: white;
+  height: 5em;
+  border-radius: 5px;
+  margin: .2em;
+  min-width: 200px;
+  padding: .2em;
+  border: solid 1px #dddddd;
+  box-shadow: 0px 0px 5px #ecebeb;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  text-align: center;
+}
+
+team-directive {
+  width: 85%;
+}
+
+.roster-table {
+  width: 100%;
+  border: solid black 1px;
+  border-spacing: 0px;
+}
+
+thead {
+  border-bottom: solid 1px black;
+}
+
+thead tr {
+  border-bottom: inherit;
+}
+
+.roster-table thead tr th {
+  border-bottom: inherit;
+  background-color: white;
+}
+
+tbody tr:nth-child(2n+0) {
+  background-color: white;
+}
+
+tbody tr:nth-child(2n+1) {
+  background-color: #ecebeb;
+}

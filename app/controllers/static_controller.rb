@@ -8,4 +8,8 @@ class StaticController < ApplicationController
     render :file => "public/views/pages/nba.html"
   end
 
+  def team
+    render :file => "public/views/pages/team.html"
+  end
+
 end
