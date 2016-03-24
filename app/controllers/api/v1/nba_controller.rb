@@ -28,5 +28,22 @@ class Api::V1::NbaController < ApplicationController
     end
 	end
 
+	def games
+		@games = NBA::Game.get_games(params[:date])
+		respond_to do |format|
+      format.html	{ redirect_to "/"}
+      format.json	{ render :json => @games }
+			format.xml  { render xml: @games.to_xml }
+    end
+	end
+
+	def play_by_play
+		@plays = NBA::PlayByPlay.get_plays_for_game(params[:game_id],params[:start_period],params[:end_period])
+		respond_to do |format|
+      format.html	{ redirect_to "/"}
+      format.json	{ render :json => @plays }
+			format.xml  { render xml: @plays.to_xml }
+    end
+	end
 
 end

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       get 'teams' => 'nba#teams', as: :team
       get 'teams/:id' => 'nba#team_roster', as: :roster
       get 'player/:id' => 'nba#player', as: :player
+      get 'games/:date' => 'nba#games', as: :games
+      get 'playbyplay/:game_id/:start_period/:end_period' => 'nba#play_by_play', as: :play_by_play
     end
   end
   get '/' => 'static#home', as: :home
