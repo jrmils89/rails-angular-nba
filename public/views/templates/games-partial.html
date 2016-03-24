@@ -169,6 +169,9 @@
 </div>
 <div ng-if="gamesCtrl.loading">Loading...</div>
 <div ng-repeat="game in gamesCtrl.games.sports_content.games.game" class="game-container">
+    <section class="game-header">
+      <a href="/playbyplay/{{game.id}}">Play By Play</a>
+    </section>
     <section class="away"><p><a href="/team/{{game.visitor.id}}">{{game.visitor.city}} {{game.visitor.nickname}}</a></p><div ng-repeat="period in game.visitor.linescores.period" class="scoreboard">
       {{period.score}}
     </div></section>
