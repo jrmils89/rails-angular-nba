@@ -1,25 +1,23 @@
-<table class="roster-table">
-  <thead>
-    <th>Name</th>
-    <th>Number</th>
-    <th>Position</th>
-    <th>Height</th>
-    <th>Weight</th>
-    <th>DOB</th>
-    <th>Age</th>
-    <th>School</th>
-  </thead>
-  <tbody>
-    <tr ng-repeat="player in teamCtrl.team.resultSets[0].rowSet | orderBy:player[3]">
-      <td>{{player[3]}}</td>
-      <td>{{player[4]}}</td>
-      <td>{{player[5]}}</td>
-      <td>{{player[6]}}</td>
-      <td>{{player[7]}}</td>
-      <td>{{player[8]}}</td>
-      <td>{{player[9]}}</td>
-      <td>{{player[11]}}</td>
-    </tr>
-  </tbody>
-</table>
-<div ng-show="teamCtrl.loading">Loading...</div>
+<h1>{{teamCtrl.team[1]}}</h1>
+<div class="player-container header">
+  <div class="player-information">Name</div>
+  <div class="player-information">#</div>
+  <div class="player-information">Pos</div>
+  <div class="player-information">Height</div>
+  <div class="player-information">Weight</div>
+  <div class="player-information">DOB</div>
+  <div class="player-information">Age</div>
+  <div class="player-information">School / Country</div>
+</div>
+<div ng-repeat="player in teamCtrl.team[0].resultSets[0].rowSet | orderBy:player[3]" class="player-container" ng-click="teamCtrl.setTab($index, player[12])">
+  <div class="player-information">{{player[3]}}</div>
+  <div class="player-information">{{player[4]}}</div>
+  <div class="player-information">{{player[5]}}</div>
+  <div class="player-information">{{player[6]}}</div>
+  <div class="player-information">{{player[7]}}</div>
+  <div class="player-information">{{player[8]}}</div>
+  <div class="player-information">{{player[9]}}</div>
+  <div class="player-information">{{player[11]}}</div>
+  <player-directive ng-if="teamCtrl.tab == $index"></player-directive>
+</div>
+<div ng-if="teamCtrl.loading">Loading...</div>

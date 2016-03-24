@@ -1,0 +1,24 @@
+<section class="player-stats-container">
+  <div ng-if="teamCtrl.loading">Loading...</div>
+  <!-- <h1 class="player-name">{{teamCtrl.player.resultSets[0].rowSet[0][3]}}</h1> -->
+  <table class="player-stats">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Pts</th>
+        <th>Ast</th>
+        <th>Reb</th>
+        <th>Pie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{teamCtrl.player.resultSets[1].rowSet[0][2]}}</td>
+        <td>{{teamCtrl.player.resultSets[1].rowSet[0][3]}}</td>
+        <td>{{teamCtrl.player.resultSets[1].rowSet[0][4]}}</td>
+        <td>{{teamCtrl.player.resultSets[1].rowSet[0][5]}}</td>
+        <td>{{teamCtrl.player.resultSets[1].rowSet[0][6]*100 | number:1}}%</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
