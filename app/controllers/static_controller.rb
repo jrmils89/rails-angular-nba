@@ -12,4 +12,10 @@ class StaticController < ApplicationController
     end
   end
 
+  def games
+    respond_to do |format|
+      format.html	{ render :file => "public/views/pages/games.html" }
+    end
+  end
+
 end

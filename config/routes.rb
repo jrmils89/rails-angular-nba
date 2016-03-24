@@ -14,9 +14,9 @@ Rails.application.routes.draw do
       get 'playbyplay/:game_id/:start_period/:end_period' => 'nba#play_by_play', as: :play_by_play
     end
   end
-  get '/' => 'static#home', as: :home
-  get '/team/:id' => 'static#team', as: :single_team
-
+  get '/' => 'static#home', as: :home_page
+  get '/team/:id' => 'static#team', as: :single_team_page
+  get '/games' => 'static#games', as: :games_page
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('nba', ['ngRoute','teams-directive','team-directive','player-directive']);
+  var app = angular.module('nba', ['ngRoute','teams-directive','team-directive','player-directive','games-directive']);
 
   app.filter('num', function() {
     return function(input) {
@@ -16,6 +16,9 @@ app.config(['$routeProvider', '$locationProvider',function($routeProvider, $loca
         }).
         when('/team/:id', {
             templateUrl: 'views/pages/team.html',
+        }).
+        when('/games', {
+            templateUrl: 'views/pages/games.html',
         }).
         otherwise({
             redirectTo: '/'
