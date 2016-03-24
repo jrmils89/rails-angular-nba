@@ -1,6 +1,8 @@
 # App
 
-This is currently a small Rails App that uses [my gem](https://rubygems.org/gems/nba_api_wrapper), mostly for funsies while I play around with Angular on Rails
+This is currently a small Rails App that uses [my gem](https://rubygems.org/gems/nba_api_wrapper), mostly for funsies while I play around with Angular on Rails.
+
+The hosted app can be found [here](https://nbabasketball.herokuapp.com/team/1610612740). Warning: not running anything close to a real production server there...
 
 ## Some Things I Plan To Try Out Here
 
