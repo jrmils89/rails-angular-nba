@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require js/controllers/teamController
+//= require js/controllers/teamsController
+//= require js/controllers/teamController
+//= require js/models/teams
+//= require js/models/team
+//= require js/app.js
 //= require_tree .
