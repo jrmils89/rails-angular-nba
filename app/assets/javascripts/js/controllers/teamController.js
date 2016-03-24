@@ -8,7 +8,7 @@ app.controller("teamController", ["$http", "$routeParams", function($http, $rout
   this.id = $routeParams.id;
 
   this.loading = true;
-
+  this.loadTeams = true;
   this.tab = null;
   this.player = {}
 
@@ -23,10 +23,10 @@ app.controller("teamController", ["$http", "$routeParams", function($http, $rout
   $http.get("/api/v1/teams/"+this.id+".json").then(
     function(response) {
         self.team = response.data
-        self.loading = false;
+        self.loadTeams = false;
       },
       function(error) {
-        self.loading = false;
+        self.loadTeams = false;
         console.log(error)
       }
     )
