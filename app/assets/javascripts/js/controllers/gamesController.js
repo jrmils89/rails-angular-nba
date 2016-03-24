@@ -5,24 +5,31 @@ app.controller("gamesController", ["$http", "$routeParams", function($http, $rou
 
   this.games = {};
 
-  this.date = $routeParams.date;
-
   this.loading = true;
 
-  this.getGames = function(date) {
-  $http.get("/api/v1/games/"+date+".json").then(
-    function(response) {
-        self.games = response.data
-        self.loading = false;
-      },
-      function(error) {
-        self.loading = false;
-        console.log(error)
-      }
-    )
+  this.getDate = function() {
+    month = $("#month").val();
+    day = $("#day").val();
+    year = $("#year").val();
+    return ""+year+month+day;
   };
 
-  self.getGames("20150324")
+  this.getGames = function() {
+    var date = self.getDate();
+    self.games = {};
+    self.loading = true;
+    $http.get("/api/v1/games/"+date+".json").then(
+      function(response) {
+          self.games = response.data
+          self.loading = false;
+        },
+        function(error) {
+          self.loading = false;
+          console.log(error)
+        }
+      )
+  };
 
+  this.loading = false;
 
 }]);

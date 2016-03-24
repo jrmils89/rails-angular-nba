@@ -5,13 +5,13 @@
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   color: black;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
   font-size: 1rem;
   text-align: center;
-  background-color: rgba(240,240,240,0.1);
+  background-color: rgba(240,240,240,0.2);
 }
 
 teams-directive {
@@ -103,6 +103,51 @@ tbody tr:nth-child(2n+1) {
 
 .player-container.header:hover {
   cursor: auto;
+}
+
+
+.home, .away {
+  width: 90%;
+}
+.home > p, .away > p {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+
+.scoreboard {
+  display: inline-block;
+  width: 25px;
+}
+
+.game-container {
+  border: solid 1px black;
+  display: inline-block;
+  width: 280px;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: white;
+}
+
+.game-date > select {
+  border: solid 1px black;
+  background-color: white;
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.game-date > button {
+  border: solid 1px black;
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 @media (max-width: 600px) {
