@@ -46,4 +46,13 @@ class Api::V1::NbaController < ApplicationController
     end
 	end
 
+	def activity_play
+		@plays = Nbaplay.play_by_play_parsing(params[:game_id],params[:start_period],params[:end_period])
+		respond_to do |format|
+			format.html	{ redirect_to "/"}
+			format.json	{ render :json => @plays }
+			format.xml  { render xml: @plays.to_xml }
+		end
+	end
+
 end

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'player/:id' => 'nba#player', as: :player
       get 'games/:date' => 'nba#games', as: :games
       get 'playbyplay/:game_id/:start_period/:end_period' => 'nba#play_by_play', as: :play_by_play
+      get 'activity/:game_id/:start_period/:end_period' => 'nba#activity_play', as: :activity_play
     end
   end
   get '/' => 'static#home', as: :home_page
