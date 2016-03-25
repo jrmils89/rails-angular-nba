@@ -1,14 +1,8 @@
 (function() {
-  var app = angular.module('nba', ['ngRoute','teams-directive','team-directive','player-directive','games-directive']);
-
-  app.filter('num', function() {
-    return function(input) {
-      return parseInt(input, 10);
-    }
-  });
+  var app = angular.module('nba', ['ngRoute','teams-directive','team-directive','player-directive','games-directive','plays-directive']);
 
   //sets up angular routing
-app.config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider) {
+  app.config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({ enabled: true });
     $routeProvider.
         when('/', {
@@ -27,5 +21,9 @@ app.config(['$routeProvider', '$locationProvider',function($routeProvider, $loca
             redirectTo: '/'
         });
     }]);
+
+  app.config(['$compileProvider', function ($compileProvider) {
+      $compileProvider.debugInfoEnabled(false);
+  }]);
 
 })()

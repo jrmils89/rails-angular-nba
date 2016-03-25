@@ -18,4 +18,10 @@ class StaticController < ApplicationController
     end
   end
 
+  def playbyplay
+    respond_to do |format|
+      format.html	{ render :file => "public/views/pages/play-by-play.html" }
+    end
+  end
+
 end

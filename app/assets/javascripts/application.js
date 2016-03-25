@@ -18,9 +18,11 @@
 //= require js/controllers/teamController
 //= require js/controllers/playerController
 //= require js/controllers/gamesController
+//= require js/controllers/playsController
 //= require js/models/teams
 //= require js/models/team
 //= require js/models/player
 //= require js/models/game
+//= require js/models/plays
 //= require js/app.js
 //= require_tree .
