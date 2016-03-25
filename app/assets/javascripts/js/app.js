@@ -20,6 +20,9 @@ app.config(['$routeProvider', '$locationProvider',function($routeProvider, $loca
         when('/games', {
             templateUrl: 'views/pages/games.html',
         }).
+        when('/playbyplay/:id', {
+            templateUrl: 'views/pages/play-by-play.html',
+        }).
         otherwise({
             redirectTo: '/'
         });
