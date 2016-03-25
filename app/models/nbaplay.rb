@@ -1,6 +1,6 @@
 class Nbaplay
-    def self.play_by_play_parsing(game_id, first_quarter,end_quarter)
-      pbp = NBA::PlayByPlay.get_plays_for_game(game_id,first_quarter,end_quarter)
+    def self.play_by_play_parsing(game_id, first_quarter, end_quarter)
+      pbp = NBA::PlayByPlay.get_plays_for_game(game_id, first_quarter, end_quarter)
       data = {}
       pbp["resultSets"][0]["rowSet"].each do |play|
         if !play[14].nil?
