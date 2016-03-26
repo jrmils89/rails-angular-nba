@@ -18,12 +18,12 @@ app.controller("playsController", ["$http", "$routeParams", function($http, $rou
   };
 
   this.options = {
-    segmentStrokeWidth : 1,
-    segmentStrokeColor : "black",
+    segmentStrokeWidth : 0.5,
+    segmentStrokeColor : '#838080',
     scaleShowLabelBackdrop : false,
     scaleBeginAtZero : true,
     animateScale: true,
-    percentageInnerCutout: 20
+    percentageInnerCutout: 5
   };
 
   this.loading = false;
